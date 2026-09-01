@@ -2081,13 +2081,13 @@ h1 em { color: var(--teal-300); font-style: normal; font-weight: 500; }
 /* Final cascade: fixed glass navigation and protected hero framing. */
 .site-header { background: rgba(247,251,253,.9); backdrop-filter: blur(22px) saturate(155%); -webkit-backdrop-filter: blur(22px) saturate(155%); border-bottom-color: rgba(19,172,244,.22); box-shadow: 0 10px 35px rgba(3,35,52,.09); height: 84px; position: fixed; }
 .site-header[data-scrolled='true'] { background: rgba(247,251,253,.96); box-shadow: 0 14px 42px rgba(3,35,52,.14); height: 70px; }
-.poster-hero { margin-top: 84px; min-height: clamp(540px,72svh,720px); }
+.poster-hero { margin-top: 84px; min-height: calc(100svh - 84px); }
 .poster-hero-copy { padding-block: 52px 42px; }
 .poster-hero h1, .poster-hero h2 { font-size: clamp(2.35rem,4vw,4.1rem); }
 @media (max-width: 760px) {
   .site-header, .site-header[data-scrolled='true'] { height: 72px; }
-  .poster-hero { margin-top: 72px; min-height: 72svh; }
-  .poster-hero-copy { min-height: 72svh; padding: 38px 1.25rem 2rem; }
+  .poster-hero { margin-top: 72px; min-height: calc(100svh - 72px); }
+  .poster-hero-copy { min-height: calc(100svh - 72px); padding: 38px 1.25rem 2rem; }
   .poster-hero h1, .poster-hero h2 { font-size: clamp(2.15rem,9vw,3rem); }
 }
 
